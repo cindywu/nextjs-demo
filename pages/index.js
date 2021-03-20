@@ -10,10 +10,8 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1 className="title">
-          <img src="/fax-logo.png" alt="" />
-          <p>tl;dr papers</p>
-        </h1>
+        <img src="/fax-logo.png" alt="" />
+        <h1 className="title">tl;dr papers</h1>
         <p className="sub-title">science abstracts a second grader can understand</p>
         <textarea placeholder="Talk to me..."></textarea>
         <br></br>
