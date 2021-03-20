@@ -15,7 +15,7 @@ export default function Home() {
           <p>tl;dr papers</p>
         </h1>
         <p className="sub-title">science abstracts a second grader can understand</p>
-        <textarea placeholder="Enter some science 🧬"></textarea>
+        <textarea placeholder="Talk to me..."></textarea>
         <br></br>
         <Link href="/summarizer">
           <button className="btn">Submit</button>
