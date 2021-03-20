@@ -5,37 +5,30 @@ export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
+        <title>tl;dr papers</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
         <h1 className="title">
-          <p>📠</p>
+          <img src="/fax-logo.png" alt="" />
           <p>tl;dr papers</p>
         </h1>
-        <p>science abstracts a second grader can understand</p>
+        <p className="sub-title">science abstracts a second grader can understand</p>
         <textarea placeholder="Enter some science 🧬"></textarea>
         <br></br>
         <Link href="/summarizer">
-          <button>Submit</button>
+          <button className="btn">Submit</button>
         </Link>
       </main>
-
+{/* 
       <footer>
-        {/* <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
-        </a> */}
         <p>Powered by GPT-3. Results may not be perfect.</p>
-        {/* <p>Made with ❤️ by Yash & Cindy.</p>
+        <p>Made with ❤️ by Yash & Cindy.</p>
         <p>Follow @tldrpapers to see trending papers summarized.</p>
-        <p>This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply. Max 50 summaries a day, contact us for more.</p> */}
-      </footer>
+        <p>This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</p>
+        <p>Max 50 summaries a day, contact us for more.</p>
+      </footer> */}
 
       <style jsx>{`
         .container {
@@ -45,6 +38,30 @@ export default function Home() {
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          color: white;
+          background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+        }
+
+        .btn {
+          background: hsl(309, 80%, 66%);
+          border: none;
+          color: white;
+          padding: 1em 2em;
+          border-radius: 4px;
+        }
+
+        .btn:hover, .btn:focus {
+          background-color: hsl(309, 80%, 50%);
+          box-shadow: 0 0 5px 0 hsl(309, 80%, 30%);
+        }
+
+        textarea {
+          width: 100%;
+          height: 200px;
+          border-radius: 8px;
+          padding: 1em;
+          border: 4px solid #ee63da;
+          font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto, Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue, sans-serif;
         }
 
         main {
@@ -58,21 +75,11 @@ export default function Home() {
 
         footer {
           width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
+          height: 200px;
+          margin: auto;
+          width: 50%;
+          padding: 10px;
           justify-content: center;
-          align-items: center;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
         }
 
         a {
