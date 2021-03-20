@@ -12,14 +12,14 @@ export default function Home() {
       <main>
         <h1 className="title">
           <p>📠</p>
-          <Link href="/summarizer">
-            <a>tl;dr papers</a>
-          </Link>
+          <p>tl;dr papers</p>
         </h1>
         <p>science abstracts a second grader can understand</p>
-        <textarea></textarea>
+        <textarea placeholder="Enter some science 🧬"></textarea>
         <br></br>
-        <button>Submit</button>
+        <Link href="/summarizer">
+          <button>Submit</button>
+        </Link>
       </main>
 
       <footer>
