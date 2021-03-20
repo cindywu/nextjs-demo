@@ -11,24 +11,31 @@ export default function Home() {
 
       <main>
         <h1 className="title">
-          Try{' '}
+          <p>📠</p>
           <Link href="/summarizer">
             <a>tl;dr papers</a>
           </Link>
-          
         </h1>
+        <p>science abstracts a second grader can understand</p>
+        <textarea></textarea>
+        <br></br>
+        <button>Submit</button>
       </main>
 
-      {/* <footer>
-        <a
+      <footer>
+        {/* <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
         >
           Powered by{' '}
           <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
-        </a>
-      </footer> */}
+        </a> */}
+        <p>Powered by GPT-3. Results may not be perfect.</p>
+        {/* <p>Made with ❤️ by Yash & Cindy.</p>
+        <p>Follow @tldrpapers to see trending papers summarized.</p>
+        <p>This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply. Max 50 summaries a day, contact us for more.</p> */}
+      </footer>
 
       <style jsx>{`
         .container {
