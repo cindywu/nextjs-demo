@@ -26,7 +26,9 @@ export default function Home() {
         <Link href="/summarizer">
           <button className="btn">Submit</button>
         </Link>
-        <Footer/>
+        <div className="footer">
+          <Footer/>
+        </div>
       </main>
     </Layout>
   )
