@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import Link from 'next/link'
 import Layout from '../components/layout'
 import Footer from './footer'
@@ -7,10 +6,6 @@ import Header from './header'
 export default function Summarizer() {
   return (
     <Layout>
-      <Head>
-        <title>tl;dr papers</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <main>
         <Header/>
         <textarea 

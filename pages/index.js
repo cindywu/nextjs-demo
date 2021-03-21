@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import Link from 'next/link'
 import Layout from '../components/layout'
 import Footer from './footer'
@@ -31,16 +30,11 @@ export default function Home() {
           {content ? content.length : 0}/{limit}
         </div>
       </>
-    );
-  };
+    )
+  }
 
   return (
     <Layout>
-      <Head>
-        <title>tl;dr papers</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <main>
         <Header/>
         <LimitedTextarea limit={2000}/>
