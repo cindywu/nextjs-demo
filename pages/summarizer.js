@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Layout from '../components/layout'
 import Footer from './footer'
+import Header from './header'
 
 export default function Summarizer() {
   return (
@@ -12,14 +13,7 @@ export default function Summarizer() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Image
-          src="/fax-logo.png"
-          height={144} 
-          width={144} 
-          alt="fax logo"
-        />
-        <h1 className="title">tl;dr papers</h1>
-        <p className="sub-title">science abstracts a second grader can understand</p>
+        <Header/>
         <textarea 
           className="text-area"
           defaultValue="Hello, I'm a little computer. I have some important work to do. It's very important that you don't touch me, because I am doing very important work. What kind of work do you want me to do? You want me to write your name? OK, what's your name? What's your name? OK, I'll write your name."

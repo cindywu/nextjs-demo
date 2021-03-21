@@ -8,6 +8,7 @@ export default function Footer() {
       Made with{' '} 
       <span className="heart">&#10084;&#65039;</span>
       by{' '}
+      <Link href="https://twitter.com/itsyashdani">
         Yash 
       </Link> 
       {''} & {''} 
