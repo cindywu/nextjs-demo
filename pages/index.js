@@ -1,10 +1,12 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
+import Layout from '../components/layout'
+import Footer from './footer'
 
 export default function Home() {
   return (
-    <div className="container">
+    <Layout>
       <Head>
         <title>tl;dr papers</title>
         <link rel="icon" href="/favicon.ico" />
@@ -19,21 +21,13 @@ export default function Home() {
         />
         <h1 className="title">tl;dr papers</h1>
         <p className="sub-title">science abstracts a second grader can understand</p>
-        <textarea className="text-area" placeholder="Talk to me..."></textarea>
+        <textarea className="text-area" placeholder="Enter some science 🧬"></textarea>
         <br></br>
         <Link href="/summarizer">
           <button className="btn">Submit</button>
         </Link>
+        <Footer/>
       </main>
-{/* 
-      <footer>
-        <p>Powered by GPT-3. Results may not be perfect.</p>
-        <p>Made with ❤️ by Yash & Cindy.</p>
-        <p>Follow @tldrpapers to see trending papers summarized.</p>
-        <p>This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</p>
-        <p>Max 50 summaries a day, contact us for more.</p>
-      </footer> */}
-
-    </div>
+    </Layout>
   )
 }

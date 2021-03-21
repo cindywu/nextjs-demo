@@ -2,8 +2,14 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import Layout from '../components/layout'
+import Footer from './footer'
 
 export default function Summarizer() {
+  function copy() {
+    let textarea = document.getElementById("textarea");
+    textarea.select();
+    document.execCommand("copy");
+  }
   return (
     <Layout>
       <Head>
@@ -27,7 +33,9 @@ export default function Summarizer() {
         <Link href="/">
           <button className="btn">Try again</button>
         </Link>
+        <Footer/>
       </main>
+      
     </Layout>
   )
 }
