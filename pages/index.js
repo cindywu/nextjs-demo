@@ -1,11 +1,39 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Image from 'next/image'
 import Layout from '../components/layout'
 import Footer from './footer'
 import Header from './header'
+import React, { useState } from 'react'
+
 
 export default function Home() {
+  const LimitedTextarea = ({ rows, cols, value, limit }) => {
+    const [content, setContent] = value ? useState(value.slice(0, limit)) : useState('');
+  
+    const setFormattedContent = React.useCallback(
+      text => {
+        setContent(text.slice(0, limit));
+      },
+      [limit, setContent]
+    );
+  
+    return (
+      <>
+        <textarea
+          className="text-area"
+          rows={rows}
+          cols={cols}
+          onChange={event => setFormattedContent(event.target.value)}
+          placeholder="Enter some science 🧬"
+          value={content}
+        />
+        <div className="char-counter">
+          {content ? content.length : 0}/{limit}
+        </div>
+      </>
+    );
+  };
+
   return (
     <Layout>
       <Head>
@@ -15,7 +43,7 @@ export default function Home() {
 
       <main>
         <Header/>
-        <textarea className="text-area" placeholder="Enter some science 🧬"></textarea>
+        <LimitedTextarea limit={2000}/>
         <br></br>
         <Link href="/summarizer">
           <button className="btn">Submit</button>
