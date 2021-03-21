@@ -156,7 +156,7 @@ code {
   font-size: 15px;
   position: relative;
   font-size: 1rem;
-  font-weight: normal;
+  font-weight: 300;
 }
 
 .footer-text {
@@ -174,4 +174,12 @@ code {
   color: #ccc;
   padding: 0 3rem;
   max-width: 480px;
+}
+
+.heart {
+  padding-right: .5em;
+}
+
+a {
+  text-decoration: underline;
 }
